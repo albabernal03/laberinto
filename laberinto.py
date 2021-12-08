@@ -35,3 +35,8 @@ imagenlaberinto = laberinto(6,muros)
 
 for i in imagenlaberinto:
     print(' '.join(i))
+
+#Una vez creado el laberinto nos ponemos en marcha en programar la tarea 
+
+def salir_del_laberinto (laberinto):
+    
