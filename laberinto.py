@@ -69,6 +69,8 @@ def salir_del_laberinto (laberinto):
     
     return movimiento 
 
+print('La solución para salir del laberinto es la siguiente:', salir_del_laberinto(imagenlaberinto))
+
 
 
 
