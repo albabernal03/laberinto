@@ -43,6 +43,33 @@ def salir_del_laberinto (laberinto):
     fila = 0
     columna = 0 
 
+    movimiento = ['Abajo']
+
+
     while (fila < n-1 and columna < n-1):
+
+        if movimiento[-1] != 'Arriba' and fila + 1 < n and laberinto[fila + 1][columna] != 'X':
+            fila += 1
+            movimiento.append('Abajo')
         
+        elif movimiento[-1] != 'Abajo' and fila - 1 > 0 and laberinto[fila-1][columna] != 'X':
+            fila-=1
+            movimiento.append('Arriba')
+        
+        elif movimiento [-1] != 'Derecha' and columna - 1 > 0 and laberinto[fila][columna-1] != 'X':
+            columna -= 1
+            movimiento.append('Izquierda')
+
+        elif movimiento [-1] != 'Izquierda' and columna + 1 > 0 and laberinto[fila][columna+1] != 'X':
+            columna += 1
+            movimiento.append('Derecha')
+        
+        else:
+            movimiento.append('Sin Salida')
+    
+    return movimiento 
+
+
+
+
 
