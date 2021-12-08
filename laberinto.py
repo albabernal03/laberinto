@@ -42,3 +42,7 @@ def salir_del_laberinto (laberinto):
     n = 6   #La dimensión que se ha establecido para este laberinto
     fila = 0
     columna = 0 
+
+    while (fila < n-1 and columna < n-1):
+        
+
