@@ -8,6 +8,21 @@ He resuleto el juego del laberinto, el cual solo tiene una solución para conseg
 
 
 
+
+
+![DIAGRAMA FLUJO](https://user-images.githubusercontent.com/91721875/145291478-be5c2a94-74f5-4d15-bea3-54c7e72bdd25.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 #variables para el laberinto
 #Estas variables las pongo en forma de tupla (ya que sirve para agrupara varios valores convirtiéndolos en uno)
