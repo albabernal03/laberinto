@@ -14,5 +14,20 @@ def laberinto(dimension,muros):
   for i in range(dimension): 
       fila = []
       for j in range(dimension):
-          if tuple ([i,j]) in muro: 
+
+          if tuple ([i,j]) in muro:
               fila.append('X')
+
+          elif tuple ([i,j]) in entrada:
+              fila.append('E')
+
+          elif tuple ([i,j]) in salida:
+              fila.append('S')
+              
+          else:
+              fila.append(' ')
+
+         
+          
+        
+
