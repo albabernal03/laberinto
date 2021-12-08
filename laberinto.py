@@ -2,7 +2,7 @@
 #variables para el laberinto
 #Estas variables las pongo en forma de tupla (ya que sirve para agrupara varios valores convirtiéndolos en uno)
 
-muro = ((0,1),(0,2),(0,3),(0,4),(1,1),(2,1),(2,3),(3,3),(4,0),(4,1),(4,2),(4,3),(0,5),(1,5),(2,5),(3,5),(4,5))
+muros = ((0,1),(0,2),(0,3),(0,4),(1,1),(2,1),(2,3),(3,3),(4,0),(4,1),(4,2),(4,3),(0,5),(1,5),(2,5),(3,5),(4,5))
 entrada = ((0,0),(0,0)) 
 salida = ((4,4),(4,4))
 
@@ -13,9 +13,10 @@ def laberinto(dimension,muros):
 
   for i in range(dimension): 
       fila = []
+
       for j in range(dimension):
 
-          if tuple ([i,j]) in muro:
+          if tuple ([i,j]) in muros:
               fila.append('X')
 
           elif tuple ([i,j]) in entrada:
@@ -23,11 +24,14 @@ def laberinto(dimension,muros):
 
           elif tuple ([i,j]) in salida:
               fila.append('S')
-              
+
           else:
               fila.append(' ')
+      laberinto.append(fila)
+      return laberinto 
 
-         
           
-        
+imagenlaberinto = laberinto(6,muros)
 
+for i in imagenlaberinto:
+    print(' '.join(i))
